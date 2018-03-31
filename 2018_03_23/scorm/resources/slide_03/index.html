@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="description" content="Слайд №3. Особенности облачных сервисов | Тестовый курс от Ковалева Василия">
+        
+        <title>Слайд №3. Особенности облачных сервисов</title>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../global_styles.css">
+    </head>
+    <body class="page">
+        <h1 class="page__title">Слайд №3. Особенности облачных сервисов</h1>
+        
+        <p class="page__paragraph page__paragraph_main-info">
+            <span class="fa fa-book text-primary page__paragraph-icon"></span>
+            Выделяют следующие особенности облачных сервисов:
+        </p>
+        
+        <ul class="list page__list">
+            <li class="list__item">
+                <b>Самообслуживание по требованию.</b> Потребитель в одностороннем порядке может предоставлять вычислительные ресурсы, такие как серверное время и сетевое хранилище, при необходимости автоматически без взаимодействия с каждым поставщиком услуг.
+            </li>
+            <li class="list__item">
+                <b>Повсеместный доступ.</b> Услуги доступны потребителям по сети передачи данных в независимости от используемого устройства, будь то мобильные телефоны, планшеты, ноутбуки или терминальные станции.
+            </li>
+            <li class="list__item">
+                <b>Объединение ресурсов.</b> Ресурсы поставщика услуг (физические и виртуальные) объединены для обслуживания нескольких потребителей и динамически распределяются в зависимости от спроса на вычислительные мощности.
+            </li>
+            <li class="list__item">
+                <b>Плата за фактическое использование ресурсов.</b> В отличие от тарифов с жёстко заданными параметрами арендуемых ресурсов, в облаках применяется принцип оплаты только реально использованных ресурсов (также этот принцип называется pay-as-you-go);
+            </li>
+            <li class="list__item">
+                <b>Учёт статистики.</b> В любой момент можно узнать, сколько именно было задействовано ресурсов. Это может помочь подобрать более подходящий тариф или конфигурацию, а так же позволяет делать прогноз пиковых нагрузок в будущем.
+            </li>
+        </ul>
+        
+        <p class="page__paragraph page__paragraph_question">
+            <span class="fa fa-question-circle text-primary page__paragraph-icon"></span>
+            Как называется принцип, согласно которому производится оплата пользования ресурсами облачных сервисов? (англ.)
+        </p>
+        
+        <input type="text" class="page__input_answer" placeholder="Введите сюда ответ">
+        
+        <button type="button" class="btn btn-primary page__submit">Дать ответ</button>
+        
+        <script src="../SCORM_API.js"></script>
+        <script>
+            const validAnswer = 'pay-as-you-go';
+            myAPI.Initialize('');
+            
+            document.getElementsByClassName('page__submit')[0].addEventListener('click', () => {
+                const value = document.getElementsByClassName('page__input_answer')[0].value,
+                      pureValue = value.match(/\w+[\w-]+\w+/)[0];
+                
+                if (pureValue === validAnswer) {
+                    console.log('Passed');
+                    myAPI.SetValue('cmi.score.raw', 4);
+                } else {
+                    console.log('Failed');
+                    myAPI.SetValue('cmi.score.raw', 0);
+                }
+                
+                myAPI.SetValue('cmi.score.scaled', 100);
+                myAPI.Terminate('');
+            });
+        </script>
+    </body>
+</html>
