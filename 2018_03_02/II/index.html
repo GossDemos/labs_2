@@ -1,26 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <meta name="description" content="Сборка с транспиляцией. II. Замена текста кнопок на id" />
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="description" content="Сборка с транспиляцией. II. Замена текста кнопок на id">
         
         <title>Сборка с транспиляцией. II. Замена текста кнопок на id</title>
         
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
-        <link rel="stylesheet" href="https://vasily-kowalev.github.io/ITMO_labs_2/index.css" />
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" 
+              rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+              rel="stylesheet">
+        <link rel="stylesheet" href="/index.css">
     </head>
-    <body>
+    <body class="page page_end-point">
+        <nav>
+            <ol class="breadcrumb bg-gray">
+                <li class="breadcrumb-item">
+                    <a href="/">Лабораторные работы. Семестр 2</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="/2018_03_02">Результаты лабораторной работы от 02.03.2018</a>
+                </li>
+                <li class="breadcrumb-item active">
+                    Сборка с транспиляцией. II. Замена текста кнопок на id
+                </li>
+            </ol>
+        </nav>
+        
         <h4 id="author" title="GossJS">Василий Ковалев</h4>
-        <a href="https://github.com/vasily-kowalev/ITMO_homeworks_2/tree/master/2018_03_02/II/" 
-            target="_blank" 
-            class="source-button">
-            Исходный код
-        </a>
-        <br />
-        <button id="bt1">button 1</button>
-        <button id="bt2">button 2</button>
+        
+        <div class="btn-group">
+            <button id="bt1" class="btn btn-success button">button 1</button>
+            <button id="bt2" class="btn btn-success button">button 2</button>
+        </div>
+        
         <script src="./dist/main.js"></script>
     </body>
 </html>
