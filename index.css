@@ -36,18 +36,16 @@ img {
 }
 
 .page_end-point .btn-group {
-    display: table;
+    display: flex;
+    justify-content: center;
 }
 
 .page_end-point form {
-    display: table;
     margin: 0 auto;
     width: 300px;
 }
 
 .page_end-point pre {
-    display: table;
-    margin: 0 auto;
     text-align: center;
 }
 
