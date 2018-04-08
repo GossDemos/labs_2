@@ -31,6 +31,11 @@ img {
     color: #606c71;
 }
 
+.page_end-point .main {
+    margin-left: 0;
+    width: 100%;
+}
+
 .page_end-point nav .bg-gray {
     border-radius: 0;
 }
