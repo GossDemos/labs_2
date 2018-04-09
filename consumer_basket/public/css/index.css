@@ -29,6 +29,13 @@
     margin: 0 0 .5rem;
 }
 
+.basket__info {
+    left: calc((100% - 264px) / 2);
+    position: absolute;
+    text-align: center;
+    top: calc((100% - 24px) / 2);
+}
+
 .basket__goods-container .good {
     margin: 0;
     min-height: calc((453px - 1px *2) / 5);
