@@ -1,7 +1,5 @@
 'use strict';
 
-// Также доступно здесь: http://kodaktor.ru/g/unsafe_788e5
-
 document
 .querySelector('button')
 .addEventListener('click', async () => {
