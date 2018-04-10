@@ -16,4 +16,5 @@
 * ## [Лабораторная работа от 06.04.2018](2018_04_06)
   ### [Задание (Часть I)](https://kodaktor.ru/06042018)
   ### [Задание (Часть II)](https://kodaktor.ru/06042018_2)
+* ## [Потребительская корзина](consumer_basket)
 * ## [PHP-сервер на Silex](https://github.com/vasily-kowalev/Silex_server)
