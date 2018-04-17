@@ -50,22 +50,21 @@
         <script src="../SCORM_API.js"></script>
         <script>
             const validAnswer = 'pay-as-you-go';
-            myAPI.Initialize('');
             
             document.getElementsByClassName('page__submit')[0].addEventListener('click', () => {
                 const value = document.getElementsByClassName('page__input_answer')[0].value,
-                      pureValue = value.match(/\w+[\w-]+\w+/)[0];
+                      pureValue = value.match(/\w+[\w-]+\w+/),
+                      prevScore = doLMSGetValue('cmi.core.score.raw');
                 
-                if (pureValue === validAnswer) {
-                    console.log('Passed');
-                    myAPI.SetValue('cmi.score.raw', 4);
+                if (pureValue && pureValue[0] === validAnswer) {
+                    console.log('True');
+                    doLMSSetValue('cmi.core.score.raw', 4 + prevScore);
                 } else {
-                    console.log('Failed');
-                    myAPI.SetValue('cmi.score.raw', 0);
+                    console.log('False');
+                    doLMSSetValue('cmi.core.score.raw', 0 + prevScore);
                 }
                 
-                myAPI.SetValue('cmi.score.scaled', 100);
-                myAPI.Terminate('');
+                doLMSFinish();
             });
         </script>
     </body>

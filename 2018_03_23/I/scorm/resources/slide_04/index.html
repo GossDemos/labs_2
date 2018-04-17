@@ -173,20 +173,19 @@
         
         <script src="../SCORM_API.js"></script>
         <script>
-            const validVariantId = 'variant_2';
-            myAPI.Initialize('');
+            const validVariantId = 'variant_2',
+                  prevScore = doLMSGetValue('cmi.core.score.raw');
             
             document.getElementsByClassName('page__submit')[0].addEventListener('click', () => {
                 if (document.getElementById(validVariantId).checked) {
-                    console.log('Passed');
-                    myAPI.SetValue('cmi.score.raw', 8);
+                    console.log('True');
+                    doLMSSetValue('cmi.core.score.raw', 8 + prevScore);
                 } else {
-                    console.log('Failed');
-                    myAPI.SetValue('cmi.score.raw', 0);
+                    console.log('False');
+                    doLMSSetValue('cmi.core.score.raw', 0 + prevScore);
                 }
                 
-                myAPI.SetValue('cmi.score.scaled', 100);
-                myAPI.Terminate('');
+                doLMSFinish();
             });
         </script>
     </body>

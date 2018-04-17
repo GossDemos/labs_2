@@ -24,13 +24,10 @@
         
         <script src="../SCORM_API.js"></script>
         <script>
-            myAPI.Initialize('');
-            
             document.getElementsByClassName('page__submit')[0].addEventListener('click', () => {
-                console.log('Passed');
-                myAPI.SetValue('cmi.score.raw', 1);
-                myAPI.SetValue('cmi.score.scaled', 100);
-                myAPI.Terminate('');
+                console.log('True');
+                doLMSSetValue('cmi.core.score.raw', 1);
+                doLMSFinish();
             });
         </script>
     </body>

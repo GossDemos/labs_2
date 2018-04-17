@@ -32,24 +32,22 @@
         <script src="../SCORM_API.js"></script>
         <script>
             const validAnswer = '42';
-            myAPI.Initialize('');
             
             document.getElementsByClassName('page__submit')[0].addEventListener('click', () => {
                 const value = document.getElementsByClassName('page__input_answer')[0].value,
-                      pureValue = value.trim();
+                      pureValue = value.trim(),
+                      prevScore = doLMSGetValue('cmi.core.score.raw');
                 
                 if (pureValue === validAnswer) {
-                    console.log('Passed');
-                    myAPI.SetValue('cmi.score.raw', 69);
-                    myAPI.SetValue('cmi.score.scaled', 100);
+                    console.log('True');
+                    doLMSSetValue('cmi.core.score.raw', 69 + prevScore);
                 } else {
-                    console.log('Failed');
-                    myAPI.SetValue('cmi.score.raw', 0);
+                    console.log('False');
+                    doLMSSetValue('cmi.core.score.raw', 0 + prevScore);
                 }
                 
-                myAPI.SetValue('cmi.scaled_passing_score', 85);
-                myAPI.SetValue('cmi.completion_status', 'completed');
-                myAPI.Terminate('');
+                doLMSSetValue('cmi.core.lesson_status', 'passed');
+                doLMSFinish();
             });
         </script>
     </body>
