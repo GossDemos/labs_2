@@ -5,6 +5,11 @@ p {
     margin: 0;
 }
 
+form p {
+    padding-left: 0;
+    padding-right: 0;
+}
+
 p + p {
     padding-top: 0;
 }
@@ -31,16 +36,33 @@ img {
     border-radius: 0.25rem;
 }
 
+.spoiler + .btn {
+    margin-top: 1rem;
+}
+
 .page__spoiler {
     margin: 1.5rem 1.5rem 0;
 }
 
-.list_answers .list__item {
-    list-style: none;
+fieldset {
+    margin: 0 2rem;
 }
 
-.page__input_answer {
-    margin-bottom: 1rem;
-    margin-left: 1.5rem;
+.answer {
+    position: relative;
+    margin-left: 0;
+}
+
+.answer_input {
+    margin: 0;
+    position: relative;
     width: 300px;
+}
+
+.form-check {
+    padding-left: 0;
+}
+
+.form-group:not(:first-of-type) .page__paragraph_question {
+    padding-top: 0;
 }

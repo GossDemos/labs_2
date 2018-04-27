@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta name="description" content="Слайд №4. Модели обслуживания | Тестовый курс от Ковалева Василия">
+        <meta name="description" content="Слайд №4. Модели обслуживания | Тестовый урок от Ковалева Василия">
         
         <title>Слайд №4. Модели обслуживания</title>
         
@@ -133,60 +133,7 @@
             </details>
         </details>
         
-        <p class="page__paragraph page__paragraph_question">
-            <span class="fa fa-question-circle text-primary page__paragraph-icon"></span>
-            Какую модель обслуживания реализует сервис <b>Heroku</b>?
-        </p>
-        
-        <ul class="list list_answers page__list">
-            <li class="list__item">
-                <input type="radio" 
-                       id="variant_1" 
-                       class="list__item_input" 
-                       name="answer-variants">
-                <label for="variant_1" class="list__item_label">SaaS</label>
-            </li>
-            <li class="list__item">
-                <input type="radio" 
-                       id="variant_2" 
-                       class="list__item_input" 
-                       name="answer-variants">
-                <label for="variant_2" class="list__item_label">PaaS</label>
-            </li>
-            <li class="list__item">
-                <input type="radio" 
-                       id="variant_3" 
-                       class="list__item_input" 
-                       name="answer-variants">
-                <label for="variant_3" class="list__item_label">IaaS</label>
-            </li>
-            <li class="list__item">
-                <input type="radio" 
-                       id="variant_4" 
-                       class="list__item_input" 
-                       name="answer-variants">
-                <label for="variant_4" class="list__item_label">Другое</label>
-            </li>
-        </ul>
-        
-        <button type="button" class="btn btn-primary page__submit">Дать ответ</button>
-        
-        <script src="../SCORM_API.js"></script>
-        <script>
-            const validVariantId = 'variant_2',
-                  prevScore = doLMSGetValue('cmi.core.score.raw');
-            
-            document.getElementsByClassName('page__submit')[0].addEventListener('click', () => {
-                if (document.getElementById(validVariantId).checked) {
-                    console.log('True');
-                    doLMSSetValue('cmi.core.score.raw', 8 + prevScore);
-                } else {
-                    console.log('False');
-                    doLMSSetValue('cmi.core.score.raw', 0 + prevScore);
-                }
-                
-                doLMSFinish();
-            });
-        </script>
+        <button type="button" class="btn btn-primary page__submit" 
+                onclick="window.parent.postMessage({ 'message': 'next' }, '*')">Дальше</button>
     </body>
 </html>

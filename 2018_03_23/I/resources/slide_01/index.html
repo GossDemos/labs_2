@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta name="description" content="Слайд №1. Об авторе | Тестовый курс от Ковалева Василия">
+        <meta name="description" content="Слайд №1. Об авторе | Тестовый урок от Ковалева Василия">
         
         <title>Слайд №1. Об авторе</title>
         
@@ -20,15 +20,7 @@
             Автор этого курса - Василий Ковалев, магистрант первого курса Университета ИТМО.
         </p>
         
-        <button type="button" class="btn btn-primary page__submit">Дальше</button>
-        
-        <script src="../SCORM_API.js"></script>
-        <script>
-            document.getElementsByClassName('page__submit')[0].addEventListener('click', () => {
-                console.log('True');
-                doLMSSetValue('cmi.core.score.raw', 1);
-                doLMSFinish();
-            });
-        </script>
+        <button type="button" class="btn btn-primary page__submit" 
+                onclick="window.parent.postMessage({ 'message': 'next' }, '*')">Дальше</button>
     </body>
 </html>
