@@ -1,4 +1,4 @@
-# [Ссылка на GitHub Pages](https://vasily-kowalev.github.com/ITMO_labs_2)
+# [Ссылка на GitHub Pages](https://gossdemos.github.io/ITMO_labs_2/)
 # Список лабораторных работ:
 * ## [Лабораторная работа от 09.02.2018](2018_02_09)
   ### [Задание](https://github.com/GossJS/js_starters1/tree/05022018)
