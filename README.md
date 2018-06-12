@@ -1,4 +1,4 @@
-# [Ссылка на GitHub Pages](https://gossdemos.github.io/ITMO_labs_2/)
+# [Ссылка на GitHub Pages](https://gossdemos.github.io/labs_2/)
 # Автор: Василий Ковалёв (с)2018
 ---
 # Список лабораторных работ:
